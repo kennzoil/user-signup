@@ -1,5 +1,5 @@
 from flask import Flask, request
-from index import *
+from templates.index import *
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
