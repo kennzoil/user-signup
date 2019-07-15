@@ -9,8 +9,13 @@ def index():
     return form.format("")
 
 # @app.route("/", methods=["POST"])
-#     def signup():
+#     def tryagain():
 #         #do code here
 #         return pass
+
+# @app.route("/welcome", methods=["POST"])
+# def welcome():
+#     #code here
+#     return pass
 
 app.run()
