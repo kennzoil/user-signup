@@ -1,21 +1,25 @@
-from flask import Flask, request
-from templates.index import *
+from flask import Flask, request, render_template
+from functions import *
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
 @app.route("/")
 def index():
-    return form.format("")
+    return render_template("index.html")
 
-# @app.route("/", methods=["POST"])
-#     def tryagain():
-#         #do code here
-#         return pass
+@app.route("/", methods=["POST"])
+def tryagain():
+    username = request.form["username"]
+    password = request.form["password"]
+    passconfirm = request.form["pass_confirm"]
+    email = request.form["email"]
 
-# @app.route("/welcome", methods=["POST"])
-# def welcome():
-#     #code here
-#     return pass
+    return
+
+@app.route("/welcome", methods=["POST"])
+def welcome():
+    return render_template("welcome.html")
+
 
 app.run()

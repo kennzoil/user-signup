@@ -1,4 +1,4 @@
-form = """<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -7,7 +7,7 @@ form = """<!DOCTYPE html>
     </head>
 
     <body>
-        <form method="POST">
+        <form method="POST" action="/welcome">
             <h1>Sign Up</h1><br>
             <table>
                 <tr>
@@ -17,12 +17,12 @@ form = """<!DOCTYPE html>
                 </tr>
                 <tr>
                     <td><label for="password">Password</label></td>
-                    <td><input name="password"></td>
+                    <td><input name="password" type="password"></td>
                     <span class="error"></span>
                 </tr>
                 <tr>
-                    <td><label for="pass-confirm">Confirm Password</label></td>
-                    <td><input name="pass-confirm"></td>
+                    <td><label for="pass_confirm">Confirm Password</label></td>
+                    <td><input name="pass_confirm" type="password"></td>
                     <span class="error"></span>
                 </tr>
                 <tr>
@@ -38,4 +38,3 @@ form = """<!DOCTYPE html>
 
     </body>
 </html>
-"""
