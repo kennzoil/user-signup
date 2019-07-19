@@ -24,10 +24,28 @@ def passwords_match(password, passconfirm):
 def valid_email(email):
     """checks validity of given email address"""
     valid = True
-    if len(email) < 3 or len(email) > 20:
-        valid = False
-    elif email.count("@") != 1 or email.count(".") != 1:
-        valid = False
-    elif " " in email:
-        valid = False
+    if email != "":
+        if len(email) < 3 or len(email) > 20:
+            valid = False
+        elif email.count("@") != 1 or email.count(".") != 1:
+            valid = False
+        elif " " in email:
+            valid = False
     return valid
+
+# def valid():
+#     """validates all inputs"""
+#     valid = True
+#     if valid_username() == False:
+#         valid = False
+#         errors["username"] = "Please enter a valid username, between 3 and 20 characters, with no spaces."
+#     elif valid_password() == False:
+#         valid = False
+#         errors["password"] = "Don't forget your password!"
+#     elif passwords_match() == False:
+#         valid = False
+#         errors["pass_confirm"] = "Make sure your passwords match."
+#     elif valid_email() == False:
+#         valid = False
+#         errors["email"] = "Remember to enter your email correctly. Or not at all!"
+#     return valid
