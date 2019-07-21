@@ -2,33 +2,33 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
         <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 
     <body>
-        <form method="POST" action="/welcome">
+        <form method="POST" action="/">
             <h1>Sign Up</h1><br>
             <table>
                 <tr>
                     <td><label for="username">Username</label></td>
-                    <td><input name="username"></td>
-                    <span class="error"></span>
+                    <td><input name="username" value="{{username}}"></td>
+                    <td><span class="error">{{username_error}}</span></td>
                 </tr>
                 <tr>
                     <td><label for="password">Password</label></td>
-                    <td><input name="password" type="password"></td>
-                    <span class="error"></span>
+                    <td><input name="password" type="password" value="{{password}}"></td>
+                    <td><span class="error">{{password_error}}</span></td>
                 </tr>
                 <tr>
                     <td><label for="pass_confirm">Confirm Password</label></td>
                     <td><input name="pass_confirm" type="password"></td>
-                    <span class="error"></span>
+                    <td><span class="error">{{passconfirm_error}}</span></td>
                 </tr>
                 <tr>
                     <td><label for="email">Email</label></td>
                     <td><input name="email" placeholder="optional"></td>
-                    <span class="error"></span>
+                    <td><span class="error">{{email_error}}</span></td>
                     </tr>
             </table>
             <button type="submit">Sign me up!</button>
