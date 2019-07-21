@@ -12,6 +12,10 @@ def valid_password(password):
     valid = True
     if password == "":
         valid = False
+    elif len(password) < 3 or len(password) > 20:
+        valid = False
+    elif " " in password:
+        valid = False
     return valid
 
 def passwords_match(password, passconfirm):
