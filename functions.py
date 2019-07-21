@@ -36,20 +36,3 @@ def valid_email(email):
         elif " " in email:
             valid = False
     return valid
-
-# def valid():
-#     """validates all inputs"""
-#     valid = True
-#     if valid_username() == False:
-#         valid = False
-#         errors["username"] = "Please enter a valid username, between 3 and 20 characters, with no spaces."
-#     elif valid_password() == False:
-#         valid = False
-#         errors["password"] = "Don't forget your password!"
-#     elif passwords_match() == False:
-#         valid = False
-#         errors["pass_confirm"] = "Make sure your passwords match."
-#     elif valid_email() == False:
-#         valid = False
-#         errors["email"] = "Remember to enter your email correctly. Or not at all!"
-#     return valid
